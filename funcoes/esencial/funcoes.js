@@ -2,7 +2,7 @@
 function saudar( nome ) {
     return `Olá, ${nome}`;
 }
-const nome = 'Alexandro';
+const nome = 'Alex Lima';
 saudar(nome);
 // Escreva uma função que receba um nome completo e retorna apenas o primeiro nome: Tiago Lage Payne de Pádua -> Tiago
 function extrairPrimeiroNome(nomeCompleto) {
@@ -12,7 +12,13 @@ const nomeCompleto = 'Alex Lima';
 const y = extrairPrimeiroNome(nomeCompleto);
 
 // Escreva uma função que receba uma palavra e torna a primeira letra maiúscula e as outras minúsculas: tIaGo -> Tiago
-function capitalizar() { }
+function capitalizar(nome) {
+    return nome.split(" ").map((palavra) => {
+        return palavra.charAt(0).toUpperCase() + palavra.substr(1).toLowerCase();
+    }).join(' ');
+}
+const capitaliza = capitalizar(nome);
+console.log(capitaliza);
 
 // Escreva uma função que recebe um preço original e uma categoria de produto e calcula o valor do imposto. Produtos da categoria Alimentação são isentos. Outros produtos tem um imposto de 10%.
 // (30, Alimentação) => 0
