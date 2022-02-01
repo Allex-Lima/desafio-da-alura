@@ -36,4 +36,15 @@ console.log(calImposto);
 // (10, Bebida, NULABSSA) => 10
 // (30, Alimentação, XPTO) => 30
 // (10, Bebida, XPTO) => 10
-function calculaDesconto() { }
+function calculaDesconto(precoOriginal, categoriaProduto, cupom) {
+    if (categoriaProduto.includes('Alimentação') && cupom.includes('NULABSSA')) {
+        return ((precoOriginal * 50) / 100);
+    }
+    return (`Não há desconto R$ ${precoOriginal},00`)
+}
+const precoOriginal = 10;
+const categoriaProduto = 'Bebida';
+const cupom = 'XPTO';
+
+const calDesconto = calculaDesconto(precoOriginal, categoriaProduto, cupom);
+console.log(calDesconto);
