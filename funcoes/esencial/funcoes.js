@@ -5,7 +5,11 @@ function saudar( nome ) {
 const nome = 'Alexandro';
 saudar(nome);
 // Escreva uma função que receba um nome completo e retorna apenas o primeiro nome: Tiago Lage Payne de Pádua -> Tiago
-function extrairPrimeiroNome() { }
+function extrairPrimeiroNome(nomeCompleto) {
+    return nomeCompleto.split(' ')[0];
+}
+const nomeCompleto = 'Alex Lima';
+const y = extrairPrimeiroNome(nomeCompleto);
 
 // Escreva uma função que receba uma palavra e torna a primeira letra maiúscula e as outras minúsculas: tIaGo -> Tiago
 function capitalizar() { }
