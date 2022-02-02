@@ -16,4 +16,13 @@ console.log(truncarPalavra);
 // "" -> undefined
 // "   " -> undefined
 // "      Maria " -> "Maria"
-function validaTextoPreenchido() { }
+function validaTextoPreenchido(texto) {
+    if (texto.trim().length === 0){
+        return undefined;
+    }
+    return texto.trim();
+}
+const texto = 'Maria'
+console.log(texto.length);
+const validaTexto = validaTextoPreenchido(texto);
+console.log(validaTexto);
