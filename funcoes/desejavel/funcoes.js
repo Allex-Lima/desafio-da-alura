@@ -2,8 +2,16 @@
 // o valor default do comprimento máximo deve ser 5:
 // (teste, 10) -> teste
 // (fulano, 4) -> fula...
-function truncar() { }
-
+function truncar(palavra, comprimentoMax = 5) {
+    if (palavra.length > comprimentoMax) {
+        return `${palavra.slice(0, comprimentoMax)}...`;
+    }
+    return `${palavra}`;
+}
+const palavra = 'fulano';
+const comprimentoMax = 4;
+const truncarPalavra = truncar(palavra, comprimentoMax);
+console.log(truncarPalavra);
 // Escreva uma função que valida se o texto informado está preenchido e retorna o texto sem espaços antes ou depois.
 // "" -> undefined
 // "   " -> undefined
